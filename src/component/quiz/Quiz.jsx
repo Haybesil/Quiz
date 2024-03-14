@@ -126,6 +126,13 @@ const Quiz = () => {
     }
   };
 
+  const handlePreviousQuestion = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+      setSelectedOption('');
+    }
+  };
+
   const restartQuiz = () => {
     setCurrentQuestion(0);
     setSelectedOption('');
@@ -157,7 +164,10 @@ const Quiz = () => {
               </li>
             ))}
           </ul>
-          <button onClick={handleNextQuestion}>Next</button>
+          <div>
+            <button onClick={handleNextQuestion}>Next</button>
+             <button onClick={handlePreviousQuestion}>Previous</button>
+          </div>
         </div>
       ) : (
         <div>
