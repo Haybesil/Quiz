@@ -170,10 +170,13 @@ const Quiz = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div className='result'>
           <h2>Quiz Completed!</h2>
           <p>Your Score: {score} / {questions.length}</p>
-          <button onClick={restartQuiz}>Restart Quiz</button>
+          <div className='button'>
+            <button onClick={restartQuiz}>Restart Quiz</button>
+          </div>
+          
         </div>
       )}
     </div>
